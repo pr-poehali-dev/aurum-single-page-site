@@ -5,24 +5,45 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-black/20 backdrop-blur-md border-b border-yellow-400/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-gray-900">АУРУМ</h1>
-                <p className="text-sm text-blue-600">Орган сертификации</p>
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center">
+                    <Icon name="Award" size={28} className="text-slate-900" />
+                  </div>
+                  <div>
+                    <h1 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                      АУРУМ
+                    </h1>
+                    <p className="text-sm text-yellow-400/80">Орган сертификации</p>
+                  </div>
+                </div>
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">О нас</a>
-              <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Виды сертификации</a>
-              <a href="#advantages" className="text-gray-600 hover:text-blue-600 transition-colors">Преимущества</a>
-              <a href="#contacts" className="text-gray-600 hover:text-blue-600 transition-colors">Контакты</a>
+              <a href="#about" className="text-gray-300 hover:text-yellow-400 transition-colors relative group">
+                О нас
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+              </a>
+              <a href="#services" className="text-gray-300 hover:text-yellow-400 transition-colors relative group">
+                Виды сертификации
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+              </a>
+              <a href="#advantages" className="text-gray-300 hover:text-yellow-400 transition-colors relative group">
+                Преимущества
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+              </a>
+              <a href="#contacts" className="text-gray-300 hover:text-yellow-400 transition-colors relative group">
+                Контакты
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+              </a>
             </nav>
-            <Button className="hidden md:flex">
+            <Button className="hidden md:flex bg-gradient-to-r from-yellow-400 to-yellow-600 text-slate-900 hover:from-yellow-500 hover:to-yellow-700 shadow-lg">
               <Icon name="Phone" size={16} className="mr-2" />
               Связаться
             </Button>
